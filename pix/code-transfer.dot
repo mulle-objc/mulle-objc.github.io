@@ -1,0 +1,29 @@
+digraph mulle
+{
+   node [ shape=box]
+
+   { rank = same; "You/master (private)"; "Developers"}
+
+   "You/master (private)" [ fontcolor="red" fontsize=16 ]
+   "You/master (private)"  -> "mulle-objc/master"      [ label=" Pull-request accepted by community  " ]
+   "Developers" [ shape=ellipse, fontcolor="blue" fontsize=16]
+
+   { rank = same; "mulle-objc/master" ; "mulle-objc/release"; }
+
+   "mulle-objc/master"     -> "You/master (private)"   [ label=" Pull  " ]
+
+   "mulle-objc/master"     -> "mulle-objc/release"     [ label=" Rebase done by community  " ]
+
+   "mulle-objc/release"    -> "mulle-nat/release"     [ label=" Cherrypick by Nat!  " ]
+
+   { rank = same; "mulle-nat/release" }
+
+   "mulle-nat/release"     -> "mulle-objc/master"      [ label=" Pull-request accepted by community  " ]
+
+
+   { rank = same;  "Nat!/master (private)";  }
+
+   "Nat!/master (private)" -> "mulle-nat/release"      [ label=" Push  " ]
+
+   "mulle-objc/release" -> "Developers"                [ label=" Package managers (homebrew)" ]
+}
