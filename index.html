@@ -36,23 +36,45 @@
     <section class="main-content">
 
 
-
-      <h2> About mulle-objc</h2>
+      <h2>About mulle-objc</h2>
       <p>This is the seed for a community interested in <b>mulle-objc</b>.</p>
       <p><b>mulle-objc</b> is a new way to run Objective-C code on various
       platforms, based on a new compiler and a new runtime.<p>
 
       <h2> Install mulle-objc with homebrew</h2>
 
-This installs all released community packages and the compiler:
+      This installs all released community packages and the compiler:
 
-<pre>
-brew tap mulle-kybernetik/software
+<pre>brew tap mulle-kybernetik/software
 brew tap mulle-objc/software
 brew install mulle-objc-developer
 </pre>
 
-      <h2> Hello World</h2>
+
+      <h2>Install mulle-objc manually</h2>
+
+      Install the compiler <a href="//github.com/Codeon-GmbH/mulle-clang">mulle-clang</a>
+      using its <a href="//github.com/Codeon-GmbH/mulle-clang/blob/mulle_objclang_39/BUILD_MULLE_CLANG.md">build guide</a>.
+
+      After this you need to install
+      <a href="//github.com/mulle-nat/mulle-bootstrap">mulle-bootstrap</a>
+      and
+      <a href="//github.com/mulle-nat/mulle-build">mulle-build</a>. Now you can
+      build and install the packages:
+
+      <pre>mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-c11
+mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-thread
+mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-allocator
+mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-aba
+mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-container
+mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-concurrent
+mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-vararg
+mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-objc
+mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/MulleObjC
+</pre>
+
+
+      <h2>Hello World</h2>
 
       As a first step after installing, here is the canonical "Hello World"
       example, with a twist: it's using the new `.aam` extension (`.m` is
@@ -96,8 +118,8 @@ EOF
       <li>Modify the program to dump the runtime as HTML pages. Add <tt>mulle_objc_dump_runtime_as_html_to_directory( "/tmp")</tt> to the end of your program.
       <li>Modify the program to dump the runtime as GraphViz. Add <tt>mulle_objc_runtime_dump_graphviz_to_file( "/tmp/foo.dot")</tt> to the end of your program.
       <li>Build it with <tt>-O0</tt>, <tt>-O1</tt>, <tt>-O2</tt>, how does the assembler code change ?
-      <li>Explore the examples in [MulleObjC/tests](//github.com/mulle-objc/MulleObjC/tree/release/tests)
-      <li>Visit <a href="//mulle-kybernetik.com/mulle-objc">mulle-objc on Mulle kybernetiK</a> for articles and documentation
+      <li>Explore the examples in <a href="https://github.com/mulle-objc/MulleObjC/tree/release/tests">MulleObjC/tests</a>
+      <li>Visit <a href="https://mulle-kybernetik.com/mulle-objc">mulle-objc on Mulle kybernetiK</a> for articles and documentation
       </ol>
 
 
@@ -112,6 +134,8 @@ EOF
       <a href="https://github.com/mulle-objc/mulle-objc.github.io/issues/1">How to become a member ?</a>
        <p>
       <a href="https://github.com/mulle-objc/mulle-objc-developer/issues">Ask a technical question or report a bug.</a>
+      <p>
+      Port or write some libraries to **mulle-objc** and share them.
 
 
       <h2>Relationships between the various repositories</h2>
