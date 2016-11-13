@@ -8,8 +8,13 @@
     <link href='stylesheets/Open+Sans:400,700.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <style>
+    .dennis-wrapper {overflow: hidden;}
+    .page-header, .main-content {overflow: auto;}
+    </style>
   </head>
   <body>
+    <div class="dennis-wrapper">
     <section class="page-header">
       <table border=0 cellpadding="0" cellspacing="0">
       <tr>
@@ -41,12 +46,20 @@
       <p><b>mulle-objc</b> is a new way to run Objective-C code on various
       platforms, based on a new compiler and a new runtime.<p>
 
+      <table><tr><th>Platform</th><th>State</th><th>Installation methods</tr>
+        <tr><td>OS X</td><td>Works</td><td>manual, homebrew (slightly broken)</td></tr>
+        <tr><td>Linux</td><td>Works</td><td>manual, homebrew (broken), apt planned</td></tr>
+        <tr><td>FreeBSD</td><td>Untested</td><td>manual</td></tr>
+        <tr><td>Windows</td><td>Broken</td><td>manual</td></tr>
+      </table>
+
       <h2> Install mulle-objc with homebrew</h2>
 
       This installs all released community packages and the compiler:
 
       <pre>brew install mulle-objc/software/mulle-objc-developer</pre>
 
+      > You may need to call this twice, because of homebrew problems.
 
       <h2>Install mulle-objc manually</h2>
 
@@ -97,7 +110,7 @@ int  main( int argc, char *argv[])
 
    foo = [Foo new];
    [foo print];
-    
+
    return( 0);
 }
 EOF
@@ -150,6 +163,6 @@ EOF
 
     </section>
 
-
+  </div>
   </body>
 </html>
