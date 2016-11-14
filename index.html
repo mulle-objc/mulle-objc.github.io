@@ -46,20 +46,49 @@
       <p><b>mulle-objc</b> is a new way to run Objective-C code on various
       platforms, based on a new compiler and a new runtime.<p>
 
+      <h3 id="mulle-objc-goals">mulle-objc goals</h3>
+
+      <ul>
+      <li>Run everywhere C runs</li>
+      <li>Everything faster than everyone else</li>
+      <li>No assembler code necessary</li>
+      <li>The runtime should be completely unloadable</li>
+      <li>Separate runtimes should be able to coexist (instances should not cross)</li>
+      <li>Should work in real time applications</li>
+      <li>No magic</li>
+      <li>No locking</li>
+      <li>Keep the <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2021.htm">Spirit of C</a>
+      </ul>
+
+
+      <h2>Install mulle-objc</h2>
+
       <table><tr><th>Platform</th><th>State</th><th>Installation methods</tr>
-        <tr><td>OS X</td><td>Works</td><td>manual, homebrew</td></tr>
-        <tr><td>Linux</td><td>Works</td><td>manual, homebrew (broken), apt planned</td></tr>
-        <tr><td>FreeBSD</td><td>Untested</td><td>manual</td></tr>
-        <tr><td>Windows</td><td>Broken</td><td>manual</td></tr>
+        <tr><td>OS X</td><td>Works</td><td>manual, [homebrew](//brew.sh)</td></tr>
+        <tr><td>Linux</td><td>Works</td><td>manual, [homebrew](http://linuxbrew.sh), apt soon</td></tr>
+        <tr><td>FreeBSD</td><td>Assumed to be working</td><td>manual</td></tr>
+        <tr><td>Windows</td><td>Assumed to be broken</td><td>manual</td></tr>
       </table>
 
-      <h2> Install mulle-objc with homebrew on OS X</h2>
+      <blockquote>
+      Windows should build OK with Visual Studio, but tests failed last time.
+      </blockquote>
+
+      <h3>Install mulle-objc with homebrew on OS X or Linux</h2>
 
       This installs all released community packages and the compiler:
 
       <pre>brew install mulle-objc/software/mulle-objc-developer</pre>
 
-      <h2>Install mulle-objc manually</h2>
+      <blockquote>
+      On Linux - to get bottled content - it's best to install homebrew like this:
+
+      <pre>git clone https://github.com/Linuxbrew/brew.git /home/linuxbrew/.linuxbrew
+      PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+      <pre>
+      </blockquote>
+
+      <h3>Install mulle-objc manually</h2>
 
       Install the compiler <a href="//github.com/Codeon-GmbH/mulle-clang">mulle-clang</a>
       using its <a href="//github.com/Codeon-GmbH/mulle-clang/blob/mulle_objclang_39/BUILD_MULLE_CLANG.md">build guide</a>.
@@ -67,8 +96,8 @@
       After this you need to install
       <a href="//github.com/mulle-nat/mulle-bootstrap">mulle-bootstrap</a>
       and
-      <a href="//github.com/mulle-nat/mulle-build">mulle-build</a>. Now you can
-      build and install the packages:
+      <a href="//github.com/mulle-nat/mulle-build">mulle-build</a>.
+      Now you can build and install the community packages:
 
       <pre>mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-c11
 mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulle-thread
