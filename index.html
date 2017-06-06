@@ -69,7 +69,7 @@
       At the moment mulle-objc runs on Linux and on OS X (and FreeBSD). If you look at it in the long term, there is nothing that prevents it from running on Windows or Android or any other OS, that's 32 bit or more. As long as there is C and clang compiles for it, Objective-C works too. If your code is compatible with mulle-objc it has gained, by the mere existence of this project, portability and longevity and therefore worth.
 
 
-      <h2>Install mulle-objc</h2>
+      <h2>Install mulle-objc developer tools</h2>
 
       <table><tr><th>Platform</th><th>State</th><th>Installation methods</tr>
         <tr><td>OS X</td><td>Works</td><td>manual, <a href="//brew.sh">homebrew</a></td></tr>
@@ -82,80 +82,9 @@
       mulle-objc should build OK with Visual Studio on Windows, but tests may fail.
       </blockquote>
 
-      <h3>Install mulle-objc with homebrew on OS X</h3>
-
-      First install <a href="//brew.sh">homebrew</a> for OS X. Then install all
-      released community packages and the compiler:
-
-      <pre>brew install mulle-objc/software/mulle-objc-developer</pre>
-
-
-      <h3>Install mulle-objc manually</h2>
-
-      Install the compiler <a href="//github.com/Codeon-GmbH/mulle-clang">mulle-clang</a>.
-
-      After this you need to install
-      <a href="//github.com/mulle-nat/mulle-bootstrap">mulle-bootstrap</a>
-      and
-      <a href="//github.com/mulle-nat/mulle-build">mulle-build</a>.
-
-      Now you can build and install the community packages:
-
-      <pre>mulle-install --prefix /usr/local --branch release https://github.com/mulle-objc/mulleobjc
-</pre>
-
-      Checkout the <a href="//github.com/mulle-objc/mulle-objc-developer/wiki/Example-installation-in-an-ubuntu-14.04-(trusty)-docker">Wiki</a> for an example install into a ubuntu/trusty docker.
-
-      <h2>Hello World</h2>
-
-      As a first step after installing, here is the canonical "Hello World"
-      example, with a twist: it's using the new `.aam` extension (`.m` is
-      not gone):
-
-      <pre>cat &lt;&lt;EOF &gt; hello-world.aam
-#import &lt;MulleObjC/MulleObjC.h&gt;
-
-
-@implementation Foo : NSObject
-
-- (void) print
-{
-   printf( "Hello World\n");
-}
-
-@end
-
-
-int  main( int argc, char *argv[])
-{
-   Foo  *foo;
-
-   foo = [Foo new];
-   [foo print];
-
-   return( 0);
-}
-EOF
-</pre>
-
-      build it with:
-
-      <pre>mulle-clang -o hello-world hello-world.aam -lMulleObjCStandalone  # linux: -ldl -lpthread</pre>
-
-
-      <h2>I did the Hello World, what now ?</h2>
-
-      <h3>Explore what's available</h3>
-
-      <ol>
-      <li>Check out the debuging facilities with <tt>MULLE_OBJC_TRACE_ENABLED=YES ./hello-world</tt>
-      <li>Check out method search tracing with <tt>MULLE_OBJC_TRACE_METHOD_SEARCHES=YES ./hello-world</tt>
-      <li>Modify the program to dump the runtime as HTML pages. Add <tt>mulle_objc_dump_runtime_as_html_to_directory( "/tmp")</tt> to the end of your program.
-      <li>Modify the program to dump the runtime as GraphViz. Add <tt>mulle_objc_runtime_dump_graphviz_to_file( "/tmp/foo.dot")</tt> to the end of your program.
-      <li>Build it with <tt>-O0</tt>, <tt>-O1</tt>, <tt>-O2</tt>, how does the assembler code change ?
-      <li>Explore the examples in <a href="https://github.com/mulle-objc/MulleObjC/tree/release/tests">MulleObjC/tests</a>
-      </ol>
-
+      Follow the <a href="https://github.com/mulle-objc/mulle-objc-developer">mulle-objc-developer</a> 
+      install instructions to get all the tools, and get you coding in no time.
+     
 
       <h3>Become part of the community</h3>
       <p>The compiler is a fork of <a href="//clang.llvm.org/">clang</a>. One
