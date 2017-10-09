@@ -40,79 +40,79 @@
 
     <section class="main-content">
 
+      <h2>+[mulle-objc about]</h2>
 
-      <h2>About mulle-objc</h2>
-      <p>This is for the community interested in <b>mulle-objc</b>.</p>
-      <p><b>mulle-objc</b> is a new way to run Objective-C code on various
-      platforms, based on a new <a href="//github.com/Codeon-GmbH/mulle-clang">compiler</a> and a new 
-      <a href="//github.com/mulle-objc/mulle-objc-runtime">runtime</a>.
-       <p>
-      [<a href="https://mulle-kybernetik.com/mulle-objc">Tell me more about mulle-objc and its technical background</a>]
-   
+      <p><b><tt>mulle-objc</tt></b> is a new way to run Objective-C code on various
+      platforms, based on a new <a href="//github.com/Codeon-GmbH/mulle-clang">compiler</a>
+      and a new <a href="//github.com/mulle-objc/mulle-objc-runtime">runtime</a>.
+      <blockquote>More <a href="https://mulle-kybernetik.com/mulle-objc">about <b><tt>mulle-objc</tt></b> and its technical background</a></blockquote>
 
-      <h3 id="mulle-objc-goals">mulle-objc goals</h3>
+
+      <h2 id="mulle-objc-goals">+[mulle-objc goals]</h2>
 
       <ul>
-      <li>Run everywhere C runs</li>
-      <li>Everything faster than everyone else</li>
-      <li>No assembler code necessary</li>
-      <li>The runtime should be completely unloadable</li>
-      <li>Separate runtimes should be able to coexist (instances should not cross)</li>
-      <li>Should work in real time applications</li>
-      <li>No magic</li>
-      <li>No locking</li>
-      <li>Keep the <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2021.htm">Spirit of C</a>
+        <li><b><i>Improve and maintain Objective-C for use in the next decades</i></b></li>
+        <li><b>Run everywhere C runs</b></li>
+        <li><b>Everything faster than everyone else</b></li>
+        <li><b>Enable static linking</b></li>
+        <li><b>Enable massive threading</b></li>
+        <li>The runtime should be completely unloadable</li>
+        <li>Should work in real time applications</li>
+        <li>No magic</li>
+        <li>No locking</li>
+        <li>Keep the <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2021.htm">Spirit of C</a>
       </ul>
 
-      <h3 id="mulle-objc-goals">mulle-objc politics</h3>
-
-      At the moment mulle-objc runs on Linux and on OS X (and FreeBSD). If you look at it in the long term, there is nothing that prevents it from running on Windows or Android or any other OS, that's 32 bit or more. As long as there is C and clang compiles for it, Objective-C works too. If your code is compatible with mulle-objc it has gained, by the mere existence of this project, portability and longevity and therefore worth.
 
 
-      <h2>Install mulle-objc developer tools</h2>
 
-      <table><tr><th>Platform</th><th>State</th><th>Installation methods</tr>
-        <tr><td>OS X</td><td>Works</td><td>manual, <a href="//brew.sh">homebrew</a></td></tr>
-        <tr><td>Linux</td><td>Works</td><td>manual (RPM, DEB for compiler)</td></tr>
-        <tr><td>FreeBSD</td><td>Assumed to be working</td><td>manual</td></tr>
-        <tr><td>Windows</td><td>Assumed to be broken</td><td>manual</td></tr>
+      <h2>+[mulle-objc install]</h2>
+
+      <table><tr><th>Platform</th><th>mulle-clang</th><th>mulle-lldb</th><th>Installation method</tr>
+        <tr><td>MacOS</td><td>Works</td><td>Works</td><td><pre>brew install mulle-objc/software/mulle-objc-developer</pre></td></tr>
+        <tr><td>Linux</td><td>Works</td><td>Works</td><td><pre>apt-get install mulle-objc-developer</pre> or <a href="https://github.com/mulle-objc/mulle-objc-developer">manual</a></tr>
+        <tr><td>FreeBSD</td><td>Works</td><td>Works</td><td><a href="https://github.com/mulle-objc/mulle-objc-developer">manual</a></td></tr>
+        <tr><td>Windows</td><td>Works</td><td>Broken</td><td><a href="https://github.com/mulle-objc/mulle-objc-developer">manual</a></td></tr>
       </table>
 
-      <blockquote>
-      mulle-objc should build OK with Visual Studio on Windows, but tests may fail.
-      </blockquote>
+      <h2 id="mulle-objc-goals">+[mulle-objc politics]</h2>
 
-      <B> Follow the <a href="https://github.com/mulle-objc/mulle-objc-developer">mulle-objc-developer</a> 
-        install instructions to get all the tools, and you will be ready to code in no time.</B>
-     
+      <b><tt>mulle-objc</tt></b> runs on <b>Linux</b>, <b>FreeBSD</b>, <b>MacOS</b> and <b>Windows</b>. There is nothing
+      that should prevent it from running on Android or any other OS, that's
+      32 bit or more. As long as there is C and clang compiles for it,
+      Objective-C works too. If your code is compatible with <b><tt>mulle-objc</tt></b> it has
+      gained, by the mere existence of this project, portability and longevity
+      and therefore worth.
 
-      <h3>Become part of the community</h3>
+      <p>
+      It would be nice to lobby <b><tt>mulle-objc</tt></b> into debian.
+
       <p>The compiler is a fork of <a href="//clang.llvm.org/">clang</a>. One
-      of the main goals of a community would be to integrate the compiler
+      of the main goals of the community is to integrate the compiler
       changes back into the mainline of <b>clang</b>.
-      For that "Evidence of a significant user community"
-      is one of the requirements.
+      For that "Evidence of a significant user community" is one of the
+      requirements.
+
+
+      <h2>+[mulle-objc join]</h2>
+
+      If you care about the project, it is important to become a public member,
+      to give it more weight in the open software community:
       <p>
-      Also it would be nice to lobby mulle-objc into the homebrew mainline, so
-      that homebrew would be motivated to fix some of its own bugs.
-      <p>
-      Therefore, if you care about the project, it is important for you to become
-      a member:
-        
       <ul>
-        <li><a href="https://github.com/mulle-objc/mulle-objc.github.io/issues/1">Become a mulle-objc member and reap the benefits of being one.</a>
+        <li><a href="https://github.com/mulle-objc/mulle-objc.github.io/issues/1">Become a <b><tt>mulle-objc</tt></b> member and reap the benefits of being one.</a>
         <li><a href="https://github.com/mulle-objc/mulle-objc-developer/issues">Ask a technical question or report a bug.</a>
         <li><a href="https://github.com/Codeon-GmbH/mulle-clang">Discuss new or absent language features.</a>
         <li><a href="https://github.com/orgs/mulle-objc/projects">Pick a project and work on it.</a> [members only]
-        <li>Port to or write some libraries for <b>mulle-objc</b> and share them.
+        <li>Port to or write some libraries for <b><tt>mulle-objc</tt></b> and share them.
         <li><a href="https://github.com/mulle-objc/mulle-objc-developer/wiki">Improve the Wiki content.</a>
       </ul>
-      
-      <h4>Community links</h4>
+
+      <h2>+[mulle-objc links]</h2>
       <ul>
-        <li><a href="http://blogory.org/mulle-objc">Blogory</a>
-        <li>Idle in the IRC Channel! <a href="http://webchat.freenode.net?randomnick=1&channels=%23mulle-objc&prompt=1&uio=d4">#mulle-objc on Freenode!</a>
         <li>Relax in the Slack Channel <a href="https://mulle-objc.slack.com">mulle-objc.slack.com</a> [public members only]
+        <li>Idle in the IRC Channel! <a href="http://webchat.freenode.net?randomnick=1&channels=%23mulle-objc&prompt=1&uio=d4">#mulle-objc on Freenode!</a>
+        <li><a href="http://blogory.org/mulle-objc">Blogory</a>
       </ul>
 
       <footer class="site-footer">
