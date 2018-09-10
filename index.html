@@ -5,7 +5,6 @@
     <title>mulle-objc</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='stylesheets/Open+Sans:400,700.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <style>
@@ -53,14 +52,30 @@
 
     <section class="main-content">
 
+      <section>
       <h2>+[mulle-objc about]</h2>
 
-      <p><b><tt>mulle-objc</tt></b> is a new way to run Objective-C code on various
-      platforms, based on a new <a href="//github.com/Codeon-GmbH/mulle-clang">compiler</a>
-      and a new <a href="//github.com/mulle-objc/mulle-objc-runtime">runtime</a>.
-      <blockquote>More <a href="https://mulle-kybernetik.com/mulle-objc">about <b><tt>mulle-objc</tt></b> and its technical background</a></blockquote>
+      <p><b><tt>mulle-objc</tt></b> is a new way to run Objective-C code on
+      various platforms. It is licensed under BSD terms and Open Source.
 
+      It consists of the following parts:
+      <p>
+      <table>
+        <tr><th>Compiler</th><td><a href="https://github.com/Codeon-GmbH/mulle-clang">mulle-clang</a></td></tr>
+        <tr><th>Debugger</th><td><a href="https://github.com/Codeon-GmbH/mulle-lldb">mulle-lldb</a></td></tr>
+        <tr><th>Runtime</th><td><a href="https://github.com/mulle-objc">mulle-objc</a></td></tr>
+        <tr><th>Class library</th><td><a href="https://github.com/MulleFoundation">MulleFoundation</a></td></tr>
+        <tr><th>C library</th><td><a href="https://github.com/mulle-c">mulle-c</a></td></tr>
+        <tr><th>Tools</th><td><a href="https://github.com/MulleSDE">MulleSDE</a></td></tr>
+      </table>
 
+      <blockquote>See: <a href="https://mulle-kybernetik.com/mulle-objc">About
+      <b><tt>mulle-objc</tt></b></a> for more
+      in-depth information and technical background.</blockquote>
+      <p>
+      </section>
+
+      <section>
       <h2 id="mulle-objc-goals">+[mulle-objc goals]</h2>
 
       <ul>
@@ -75,10 +90,10 @@
         <li>No locking</li>
         <li>Keep the <a href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2021.htm">Spirit of C</a>
       </ul>
+      <p>
+      </section>
 
-
-
-
+      <section>
       <h2>+[mulle-objc install]</h2>
 
       Installation with a package manager is supported on the following platforms:
@@ -90,7 +105,27 @@
 
       See <a href="//github.com/MulleFoundation/mulle-foundation-developer">mulle-foundation-developer</a> or
       <a href="//github.com/mulle-objc/mulle-objc-developer">mulle-objc-developer</a> for further installation instructions.
+      <p>
+      </section>
 
+      <section>
+      <h2>+[mulle-objc join]</h2>
+
+      If you care about the project, it is important to become a public member,
+      to give it more weight in the open software community:
+      <p>
+      <ul>
+        <li><a href="https://github.com/mulle-objc/mulle-objc.github.io/issues/1">Become a <b><tt>mulle-objc</tt></b> member and reap the benefits of being one.</a>
+        <li><a href="https://github.com/mulle-objc/mulle-objc-developer/issues">Ask a technical question or report a bug.</a>
+        <li><a href="https://github.com/Codeon-GmbH/mulle-clang">Discuss new or absent language features.</a>
+        <li><a href="https://github.com/orgs/mulle-objc/projects">Pick a project and work on it.</a> [members only]
+        <li>Port to or write some libraries for <b><tt>mulle-objc</tt></b> and share them.
+        <li><a href="https://github.com/mulle-objc/mulle-objc-developer/wiki">Improve the Wiki content.</a>
+      </ul>
+      <p>
+      </section>
+
+      <section>
       <h2 id="mulle-objc-goals">+[mulle-objc politics]</h2>
 
       <b><tt>mulle-objc</tt></b> runs on <b>Linux</b>, <b>FreeBSD</b>, <b>MacOS</b> and <b>Windows</b>. There is nothing
@@ -108,28 +143,18 @@
       changes back into the mainline of <b>clang</b>.
       For that "Evidence of a significant user community" is one of the
       requirements.
-
-
-      <h2>+[mulle-objc join]</h2>
-
-      If you care about the project, it is important to become a public member,
-      to give it more weight in the open software community:
       <p>
-      <ul>
-        <li><a href="https://github.com/mulle-objc/mulle-objc.github.io/issues/1">Become a <b><tt>mulle-objc</tt></b> member and reap the benefits of being one.</a>
-        <li><a href="https://github.com/mulle-objc/mulle-objc-developer/issues">Ask a technical question or report a bug.</a>
-        <li><a href="https://github.com/Codeon-GmbH/mulle-clang">Discuss new or absent language features.</a>
-        <li><a href="https://github.com/orgs/mulle-objc/projects">Pick a project and work on it.</a> [members only]
-        <li>Port to or write some libraries for <b><tt>mulle-objc</tt></b> and share them.
-        <li><a href="https://github.com/mulle-objc/mulle-objc-developer/wiki">Improve the Wiki content.</a>
-      </ul>
+      </section>
 
+      <section>
       <h2>+[mulle-objc links]</h2>
       <ul>
         <li>Relax in the Slack Channel <a href="https://mulle-objc.slack.com">mulle-objc.slack.com</a> [public members only]
         <li>Idle in the IRC Channel! <a href="http://webchat.freenode.net?randomnick=1&channels=%23mulle-objc&prompt=1&uio=d4">#mulle-objc on Freenode!</a>
         <li><a href="http://blogory.org/mulle-objc">Blogory</a>
       </ul>
+      <p>
+      </section>
     </section>
 
     <section class="page-footer">
